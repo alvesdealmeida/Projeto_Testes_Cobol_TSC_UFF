@@ -1,0 +1,14 @@
+IDE: openCobol - compilador de código aberto ,ele transforma um código cobol em C nativo da máquina.
+
+MAINFRAME
+Alta plataforma
+baixa plataforma
+
+.COB
+
+comando cobol
+
+.JCL
+
+MAINFRAME
+

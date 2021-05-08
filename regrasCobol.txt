@@ -1,0 +1,187 @@
+coluna
+1 a 6 > área do editor do cobol
+
+7 é usada para comentar ou continução do 
+editor (contiunação da linha anterior 
+colocar um ifem).
+
+8 a 11 nível A (área A)
+divisões, seções ,parágrafos, níveis.
+
+12 a 72 nível B (área B) todos o comandos
+que não podem ser escrito na área A.
+parâmetros e instruções: comandos cobol.
+
+73 a 80 código de identificação do programa
+Não é utilizada na programação cobol.
+---------------------------------------------
+
+IDENTIFICATION DIVISION.
+PROGRAM-ID.   PROGRA001.
+
+
+
+
+ENVIRONMENT DIVISION.
+
+CONFIGURATION SECTION.
+SPECIAL-NAMES.
+
+INPUT-OUTPUT   SECTION.
+FILE-CONTROL.
+
+DATA  DIVISION.
+FILE       SECTION.
+WORKING-STORAGE   SECTION.
+77 WRK-NOME      PIC X(20) VALUE 'SEBASTIAO
+- 'ALVES DE ALMEIDA' .
+
+PROCEDURE DIVISION.
+     DISPLAY WRK-NOME.
+     DISPLAY 'OLA MUNDO!'.
+     STOP RUN.
+
+------------------------------------------
+variáveis são espaço reservado na memória 
+para guardar dados
+
+77 identificador tam 30 caract
+nivel identificador   formato   valor inicial
+77      NUMEROX       PIC 9(18).
+77      NUMEROX-S     PIC S9(18).
+77      NUMEROX-DEC   PIC  9(05)V9(02).
+77      NUMEROX-DEC   PIC  999V99.
+77      NUMEROX-DEC   PIC  9(07)V99.
+
+77      NOMEX         PIC A(20).
+77      NOMENUMERO    PIC X(30).
+--------------------------------------------- 
+Niveis de variáveis
+variáveis composta
+Registro armazena dados
+----------------------------------
+Registro:
+Cliente 
+Produto
+
+01 nivel de grupo (alfanúmerico)
+itens elementares 02 a 49
+
+01 CLIENTE.
+     02 NOME      PIC X(20) VALUE "JOSE BENTO".
+     02 RG        PIC X(11) VALUE "44444444444".
+     02 CPF       PIC X(11) VALUE "55555555555".
+     02 ENDERECO  PIC X(20) VALUE "RUA X070875". 
+     02 DATANASC  PIC X(08) VALUE "19021991".
+
+     02 DATANASC.
+          03 DIA  PIC XX    VALUE "19".
+          03 MES  PIC XX    VALUE "03".
+          03 ANO  PIC X(04) VALUE "1993".
+          66 MES-ANO RENAMES MES THRU ANO.
+          78 MASCULINO VALUE "M".
+          78 FEMININO VALUE "F"
+
+     DISPLAY CLIENTE.
+     DISPLAY NOME.
+
+-----------------------------------------------------
+NIVEIS VAI DE 01 A 99
+02 A 49
+
+50 A 99  futuras autorizaçoes cobol
+===============================
+66 renomear outras variáveis
+77 DECLAR VARIÁVEIS INDEPENDENE
+
+78 DECLARAÇÃO DENTRO DE UM PROGRAMA
+
+88 
+=====================================
+01 GENERO PIC X,
+   88 MASCULINA
+   88 FEMININO VALUE "F"  
+
+SET MASCULINO TO TURE.
+
+SET FEMININO TO TRUE.
+IF FEMININO
+      DISPLAY GENERO.
+STOP RUN.
+==================================
+COMANDOS
+ACCEPT - RECEBER DADOS
+DISPLY - MOSTRA O CONTEÚDO
+STOP RUN - ENCERRA O PROGRAMA
+-------------------------------
+77 WRK-NOME           PIC X(20) VALUE SPACES.
+77 WRK-DATA           PIC 9(6) VALUE ZEROS.
+77 WRK-DATA-JULIANA   PIC 9(5) VALUE ZEROS.
+77 WRK-DIA            PIC 9(1) VALUE ZERO.
+77 WRL-HORA           PIC 9(8) VALUE ZEROS.
+--------------------------------------
+ACCEPT WRK-NOME.
+DISPLAY "OLA!" WRK-NOME.
+-----------------------------
+ACCEPT WRK-DATA FROM DATE.
+DISPLAY WRK-DATA.
+
+ACCEPT WRK-DATA-JULIANA FROM DAY.
+DISPLAY WRK-DATA-JULIANA.
+
+ACCEPT WRK-DIA FROM DAY-OF-WEEK.
+DISPLAY WRK-DIA.
+
+ACCEPT WERK-HORA FROM TIME.
+DISPLAY WRK-HORA.
+------------------------------
+STOP RUN.
+============================================
+11
+
+MOVE  - ATRIBUIR VALORES A VARIÁVEIS - TRANSFER VALOR PARA
+UM DETREMINADO CAMPO
+
+77 WRK-VALOR     PIC 9(10) VALUE 10.
+77 WRK-VALOR2    PIC 9(18) VALUE ZEROS.
+
+MOVE 20 TO WRK-VALOR2.
+DISPLAY WRK-VALOR2.
+
+MOVE WRK-VALOR TO WRK-VALOR2.
+
+MOVE 70 WRK-VALOR2 WRK-VALOR
+========================================
+12
+ADD
+
+77 WRK-ACUMULADOR  PIC 9(2) VALUE ZEROES. 10
+
+ADD 1 TO WRK-ACUMULADOR. = (1++)= WRK-ACUMULADOR + 1
+DILPLAY WRK-ACUMULADOR.
+
+77 WRK-ACUMULADOR2    PIC 9(2) VALUE ZEROS.
+
+77 WRK-SALDO          PIC 9(10) VALUE ZEROS.
+ADD 1 1 TO WRK-ACUMULDOR.
+ADD 1 3 TO WRK-ACUMULADOR.
+ADD WRK-ACUMULADOR2
+
+ADD 1 GIVING WRK-ACUMULADOR
+tratamento de erros:
+ON SIZE ERROR
+ DISPLAY 'DEU ERRO NO ACUMULADOR'
+END-ADD.
+--------------------------------------
+ADD 2 TO WRK-ACUMULADOR.
+         TO WR-ACUMULARO 2.
+
+DISLPAY WRK-ACUMULADOR '' WRK-ACUMULADOR 2.
+---------------------------------------
+
+COMPUTE (+ - / * ; ** ; ();=
+
+COMPUTE WRK-ACUMULADOR = WRK-ACUMULADOR /2
+
+SUBTRACT 80 FROM WRK-SALDO
+

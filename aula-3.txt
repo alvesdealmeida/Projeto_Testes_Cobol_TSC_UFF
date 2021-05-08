@@ -1,0 +1,34 @@
+PROGRAMA
+	DIVISÕES
+		SEÇÕES
+			PARAGRAFOS
+				FRASE
+					COMANDOS
+
+4 divisões
+
+Indentifcation division.
+
+	Não possui SECTION
+
+	POSSUI INFORMAÇÕES DOCUMENTAIS DO PROGRAMA
+
+programm-Id. XXX0000.
+actor
+instalation
+data-writtin
+data-compliled
+* é colocado na coluna 7 e  refere-se a comentario 
+
+
+Invarionment division.
+
+Identifcar o computador e os periféricos do computador.Qualifica o ambiente, equipamento e arquivos. 
+Mapear
+
+CONFIGURATION SECTION.
+INPUT-OUTPUT SECTION.
+Data division.
+
+Procedure division. 
+   
